@@ -117,14 +117,38 @@ fn parse_move() -> Result<ChessMove, String> {
 fn main() -> io::Result<()> {
     println!("What's your name");
     let chess_move = parse_move();
-    let mut board: [[ChessPiece; 2]; 2] = [
+    let mut board: [[ChessPiece; 8]; 3] = [
         [
             ChessPiece {
-                piece_type: ChessPieceType::Pawn,
+                piece_type: ChessPieceType::Rook,
                 color: Color::White,
             },
             ChessPiece {
-                piece_type: ChessPieceType::Pawn,
+                piece_type: ChessPieceType::Knight,
+                color: Color::White,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Bishop,
+                color: Color::White,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Queen,
+                color: Color::White,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::King,
+                color: Color::White,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Bishop,
+                color: Color::White,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Knight,
+                color: Color::White,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Rook,
                 color: Color::White,
             },
         ],
@@ -137,7 +161,65 @@ fn main() -> io::Result<()> {
                 piece_type: ChessPieceType::Pawn,
                 color: Color::White,
             },
+            ChessPiece {
+                piece_type: ChessPieceType::Pawn,
+                color: Color::White,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Pawn,
+                color: Color::White,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Pawn,
+                color: Color::White,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Pawn,
+                color: Color::White,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Pawn,
+                color: Color::White,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Pawn,
+                color: Color::White,
+            },
         ],
+        [
+            ChessPiece {
+                piece_type: ChessPieceType::Pawn,
+                color: Color::Black,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Pawn,
+                color: Color::Black,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Pawn,
+                color: Color::Black,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Pawn,
+                color: Color::Black,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Pawn,
+                color: Color::Black,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Pawn,
+                color: Color::Black,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Pawn,
+                color: Color::Black,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Pawn,
+                color: Color::Black,
+            },
+        ]
     ];
     match chess_move {
         Ok(new_move) => println!(
