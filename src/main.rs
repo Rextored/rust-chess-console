@@ -117,7 +117,7 @@ fn parse_move() -> Result<ChessMove, String> {
 fn main() -> io::Result<()> {
     println!("What's your name");
     let chess_move = parse_move();
-    let mut board: [[ChessPiece; 8]; 3] = [
+    let mut board: [[ChessPiece; 8]; 8] = [
         [
             ChessPiece {
                 piece_type: ChessPieceType::Rook,
@@ -188,9 +188,141 @@ fn main() -> io::Result<()> {
         ],
         [
             ChessPiece {
-                piece_type: ChessPieceType::Pawn,
-                color: Color::Black,
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
             },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+        ],
+        [
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+        ],
+        [
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+        ],
+        [
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::None,
+                color: Color::Undefined,
+            },
+        ],
+        [
             ChessPiece {
                 piece_type: ChessPieceType::Pawn,
                 color: Color::Black,
@@ -219,7 +351,45 @@ fn main() -> io::Result<()> {
                 piece_type: ChessPieceType::Pawn,
                 color: Color::Black,
             },
-        ]
+            ChessPiece {
+                piece_type: ChessPieceType::Pawn,
+                color: Color::Black,
+            },
+        ],
+        [
+            ChessPiece {
+                piece_type: ChessPieceType::Rook,
+                color: Color::Black,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Knight,
+                color: Color::Black,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Bishop,
+                color: Color::Black,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Queen,
+                color: Color::Black,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::King,
+                color: Color::Black,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Bishop,
+                color: Color::Black,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Knight,
+                color: Color::Black,
+            },
+            ChessPiece {
+                piece_type: ChessPieceType::Rook,
+                color: Color::Black,
+            },
+        ],
     ];
     match chess_move {
         Ok(new_move) => println!(
